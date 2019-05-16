@@ -1,7 +1,7 @@
 
 <h1 class="mb-3 comunidad-titulo">Nuestras Comunidades</h1>
 
-<div class="row comunidad-general">
+<div class="row comunidad-general ftco-animate">
 
         @foreach ($comunidad as $com)
 
