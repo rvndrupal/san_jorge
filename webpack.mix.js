@@ -32,6 +32,4 @@ const mix = require('laravel-mix');
 
 
 
-
-
-//mix.sass('resources/sass/front.scss', 'public/front.css');
+mix.sass('resources/sass/front.scss', 'public/front.css');

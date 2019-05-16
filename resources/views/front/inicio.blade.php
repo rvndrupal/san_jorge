@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{ asset('front/css/icomoon.css') }}">
     <link rel="stylesheet" href="{{ asset('front/css/ihover.min.css') }}">
     <link rel="stylesheet" href="{{ asset('front/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('front.css') }}">
 
   </head>
   <body>
