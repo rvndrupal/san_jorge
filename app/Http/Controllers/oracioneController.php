@@ -65,7 +65,7 @@ class oracioneController extends AppBaseController
 
         Flash::success('Oracione saved successfully.');
 
-        return redirect(route('oraciones.index'));
+        return redirect(route('oraciones.create'));
     }
 
     /**

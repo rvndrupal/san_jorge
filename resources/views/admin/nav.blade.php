@@ -56,6 +56,7 @@
         <li><a href="{{ route('bloqueunos.index') }}"><i class="fa fa-eye"></i>Bloque uno</a></li>
         <li><a href="{{ route('sliders.index') }}"><i class="fa fa-eye"></i>Slider</a></li>
         <li><a href="{{ route('oraciones.index') }}"><i class="fa fa-eye"></i>Oraciones</a></li>
+        <li><a href="{{ route('comunidades.index') }}"><i class="fa fa-eye"></i>Comunidades</a></li>
 
 
         </ul>
