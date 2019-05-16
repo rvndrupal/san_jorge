@@ -238,3 +238,5 @@ Route::resource('bloqueunos', 'BloqueunoController');
 
 
 Route::resource('sliders', 'SliderController');
+
+Route::resource('oraciones', 'oracioneController');
