@@ -21,33 +21,40 @@
 
     <link rel="stylesheet" href="{{ asset('front/css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('front/css/icomoon.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/css/ihover.min.css') }}">
     <link rel="stylesheet" href="{{ asset('front/css/style.css') }}">
 
   </head>
   <body>
      {{-- Bloque uno --}}
 
-        @include('front.bloqueuno');
+        @include('front.bloqueuno')
 
      {{-- Bloque uno --}}
 
      {{-- Menu --}}
 
-        @include('front.menu');
+        @include('front.menu')
 
      {{-- Menu --}}
 
     {{-- Slider --}}
 
-        @include('front.slider');
+        @include('front.slider')
 
     {{-- Slider --}}
 
    {{-- Oraciones --}}
 
-    @include('front.oraciones');
+    @include('front.oraciones')
 
    {{-- Oraciones --}}
+
+   {{-- Comunidades --}}
+
+   @include('front.comunidades')
+
+   {{-- Comunidades --}}
 
 
 
