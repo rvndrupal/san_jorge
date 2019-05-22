@@ -242,3 +242,5 @@ Route::resource('sliders', 'SliderController');
 Route::resource('oraciones', 'oracioneController');
 
 Route::resource('comunidades', 'ComunidadeController');
+
+Route::resource('sectores', 'SectoreController');
