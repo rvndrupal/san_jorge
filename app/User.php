@@ -29,7 +29,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','sectore_id',
     ];
 
     /**
@@ -41,8 +41,14 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function posts()
+    // public function posts()
+    // {
+    //     return $this->hasMany(Post::class);
+    // }
+
+    //relacion con sector
+    public function sectores()
     {
-        return $this->hasMany(Post::class);
+        return $this->belongsTo('App\Models\Sectore','sectore_id');
     }
 }

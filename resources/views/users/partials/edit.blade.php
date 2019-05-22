@@ -1,9 +1,15 @@
-<div class="from-group">    
+<div class="from-group">
     {!! Form::label('name','Nombre') !!}
-    
-    {!! Form::text('name', null, ['class' => 'form-control']) !!}   
-    
+
+    {!! Form::text('name', null, ['class' => 'form-control']) !!}
+
 </div>
+
+<div class="form-group">
+    {{ Form::label('sectore_id', 'Sector') }}
+    {{ Form::select('sectore_id' ,$sectores , null,  ['class' => 'form-control']) }}
+</div>
+
 <hr>
 
 <h3>Lista de roles</h3>
@@ -17,15 +23,16 @@
                <em>( {{ $role->description ?: 'N/A' }})</em>
             </label>
         </li>
-            
+
         @endforeach
 
     </ul>
 </div>
 
 
-<div class="from-group">    
-        
-    {!! Form::submit('Guardar', ['class' => 'btn btn-sm btn-primary']) !!}   
-    
+<div class="from-group">
+
+    {!! Form::submit('Guardar', ['class' => 'btn btn-sm btn-primary']) !!}
+    <a class="btn btn-sm btn-secondary" href="{{ route('users.index') }}">Cancelar</a>
+
 </div>

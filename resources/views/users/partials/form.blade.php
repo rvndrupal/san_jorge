@@ -12,6 +12,11 @@
     {{ Form::text('password', null, ['class' => 'form-control']) }}
 </div>
 
+<div class="form-group">
+    {{ Form::label('sectore_id', 'Sector') }}
+    {{ Form::select('sectore_id' ,$sectores , null,  ['class' => 'form-control']) }}
+</div>
+
  <h3>Lista de roles</h3>
                         <div class="form-group">
                             <ul class="list-unstyled">
@@ -31,6 +36,7 @@
 
 <div class="form-group">
     {{ Form::submit('Guardar', ['class' => 'btn btn-sm btn-primary']) }}
+    <a class="btn btn-sm btn-secondary" href="{{ route('users.index') }}">Cancelar</a>
 </div>
 
 

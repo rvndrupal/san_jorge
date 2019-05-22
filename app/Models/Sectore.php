@@ -15,7 +15,7 @@ class Sectore extends Model
 {
 
     public $table = 'sectores';
-    
+
 
 
     public $fillable = [
@@ -41,5 +41,11 @@ class Sectore extends Model
         'nombre' => 'required'
     ];
 
-    
+    //relacion con usuario
+    public function user()
+    {
+        return $this->hasOne('App\User');
+    }
+
+
 }

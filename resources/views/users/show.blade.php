@@ -25,6 +25,7 @@
                 <div class="panel-body">
                 <p> <strong>Nombre</strong> {{ $user->name }}</p>
                 <p> <strong>Email</strong> {{ $user->email }}</p>
+                <p> <strong>Sector</strong> {{ $user->sectores->nombre }}</p>
                 </div>
             </div>
         </div>

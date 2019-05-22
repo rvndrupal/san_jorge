@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\User;
+use App\Models\Sectore;
 use Caffeinated\Shinobi\Models\Role;
 use Illuminate\Support\Facades\Hash;
 
@@ -20,7 +21,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::orderBy('id','DESC')->paginate(10);
+         $users = User::with(['sectores'])->orderBy('id','DESC')->paginate(10);
 
         return view('users.index', compact('users'));
     }
@@ -29,7 +30,10 @@ class UserController extends Controller
     public function create()
     {
         $roles = Role::get(); //se descargan todos los roles
-        return view('users.create',compact('roles'));
+        $sectores = Sectore::orderBy('nombre', 'ASC')->pluck('nombre', 'id');
+
+        //dd($sectores);
+        return view('users.create',compact('roles','sectores'));
     }
 
 
@@ -67,8 +71,9 @@ class UserController extends Controller
     public function edit(User $user)
     {
         $roles = Role::get(); //se descargan todos los roles
+        $sectores = Sectore::orderBy('nombre', 'ASC')->pluck('nombre', 'id');
 
-        return view('users.edit', compact('user', 'roles'));
+        return view('users.edit', compact('user', 'roles','sectores'));
     }
 
     /**
