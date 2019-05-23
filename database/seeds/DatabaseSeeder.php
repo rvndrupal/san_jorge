@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         factory(App\Models\oracione::class, 12)->create();
         factory(App\Models\Slider::class, 6)->create();
         factory(App\Models\Comunidade::class, 8)->create();
+        factory(App\Models\SectorSlider::class, 6)->create();
 
         //  factory(App\Category::class, 20)->create();
         //  factory(App\Tag::class, 21)->create();

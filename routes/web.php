@@ -28,6 +28,11 @@ Route::get('admin', function () {
 Route::get('/inicio', 'FrontController@index')->name('front.inicio');
 
 
+
+Route::get('cdmx', function () {
+    return view('front.cdmx');
+})->name('front.cdmx');
+
 //########Front ############
 
 
@@ -244,3 +249,6 @@ Route::resource('oraciones', 'oracioneController');
 Route::resource('comunidades', 'ComunidadeController');
 
 Route::resource('sectores', 'SectoreController');
+
+
+Route::resource('sectorSliders', 'SectorSliderController');

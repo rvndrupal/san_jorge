@@ -72,6 +72,7 @@
         <ul class="treeview-menu">
 
         <li><a href="{{ route('sectores.index') }}"><i class="fa fa-eye"></i>Sector</a></li>
+        <li><a href="{{ route('sectorSliders.index') }}"><i class="fa fa-eye"></i>Slider</a></li>
 
 
 
