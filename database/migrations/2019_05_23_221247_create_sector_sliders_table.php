@@ -18,6 +18,10 @@ class CreateSectorSlidersTable extends Migration
             $table->string('titulo');
             $table->string('descripcion');
             $table->string('imagen');
+
+            $table->unsignedInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+
             $table->timestamps();
         });
     }

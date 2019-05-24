@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use App\User;
+use App\Models\SectorSlider;
 
 use Illuminate\Support\Facades\Storage;
 
@@ -45,7 +47,12 @@ class SectorSliderController extends AppBaseController
      */
     public function create()
     {
-        return view('sector_sliders.create');
+
+        $usuarios = User::where('id','=',auth()->user()->id)->orderBy('name', 'ASC')->pluck('name', 'id');
+       // $usuario = auth()->user()->id;
+
+        //dd($usuarios);
+        return view('sector_sliders.create',compact('usuarios'));
     }
 
     /**
@@ -57,15 +64,21 @@ class SectorSliderController extends AppBaseController
      */
     public function store(CreateSectorSliderRequest $request)
     {
-        $input = $request->all();
 
-        $sectorSlider = $this->sectorSliderRepository->create($input);
-
+         $slider = SectorSlider::create($request->all());
+        // $slider=new SectorSlider();
+        // $slider->titulo=$request->input("titulo");
+        // $slider->descripcion=$request->input("descripcion");
+        // $id=auth()->user()->id;
          //IMAGE
          if($request->file('imagen')){
             $path = Storage::disk('public')->put('secto-slider',  $request->file('imagen'));
-            $sectorSlider->fill(['imagen' => asset($path)])->save();
+            $slider->fill(['imagen' => asset($path)])->save();
         }
+
+        // $slider->user_id=$id;
+
+        // $slider->save();
 
         Flash::success('Sector Slider saved successfully.');
 

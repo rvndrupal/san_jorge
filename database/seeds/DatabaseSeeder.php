@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
          //$this->call(PermissionsTableSeeder::class);
          //factory(App\Product::class, 50)->create();
         factory(App\Models\Sectore::class, 5)->create();
-        factory(App\User::class, 1)->create();
+        factory(App\User::class, 4)->create();
         factory(App\Models\Bloqueuno::class, 2)->create();
         factory(App\Models\oracione::class, 12)->create();
         factory(App\Models\Slider::class, 6)->create();

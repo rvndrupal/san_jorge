@@ -47,5 +47,9 @@ class Sectore extends Model
         return $this->hasOne('App\User');
     }
 
+    public function sectSlider()
+    {
+        return $this->hasManyThrough('App\Models\SectorSlider', 'App\User','sectore_id'); //por la documentacion
+    }
 
 }

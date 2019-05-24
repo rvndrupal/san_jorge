@@ -8,6 +8,7 @@ use App\Models\Slider;
 use App\Models\Oracione;
 use App\Models\Comunidade;
 use App\Models\SectorSlider;
+use App\Models\Sectore;
 
 class FrontController extends Controller
 {
@@ -29,6 +30,11 @@ class FrontController extends Controller
         $secSlider=SectorSlider::orderBy('id','DESC')->take(4)->get();
         //dd($nombre);
         //dd($secSlider);
+
+        $sectores=Sectore::with(['sectSlider'])->orderBy('id','DESC')->get();
+
+        dd($sectores);
+
         return view('front.'.$nombre ,compact('secSlider'));
     }
 

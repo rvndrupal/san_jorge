@@ -17,13 +17,14 @@ class SectorSlider extends Model
 {
 
     public $table = 'sector_sliders';
-    
+
 
 
     public $fillable = [
         'titulo',
         'descripcion',
-        'imagen'
+        'imagen',
+        'user_id',
     ];
 
     /**
@@ -49,5 +50,9 @@ class SectorSlider extends Model
         'imagen' => 'required'
     ];
 
-    
+
+
+
+
+
 }
