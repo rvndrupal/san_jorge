@@ -29,9 +29,9 @@ Route::get('/inicio', 'FrontController@index')->name('front.inicio');
 
 
 
-Route::get('cdmx', function () {
-    return view('front.cdmx');
-})->name('front.cdmx');
+Route::get('sector/{nombre}', 'FrontController@sectorMaster')->name('front.cdmx');
+
+
 
 //########Front ############
 

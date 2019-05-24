@@ -7,6 +7,7 @@ use App\Models\Bloqueuno;
 use App\Models\Slider;
 use App\Models\Oracione;
 use App\Models\Comunidade;
+use App\Models\SectorSlider;
 
 class FrontController extends Controller
 {
@@ -21,6 +22,14 @@ class FrontController extends Controller
 
 
         return view('front.inicio',compact('uno','slider','oraciones','comunidad'));
+    }
+
+    public function sectorMaster($nombre)
+    {
+        $secSlider=SectorSlider::orderBy('id','DESC')->take(4)->get();
+        //dd($nombre);
+        //dd($secSlider);
+        return view('front.'.$nombre ,compact('secSlider'));
     }
 
 
